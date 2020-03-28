@@ -1,0 +1,47 @@
+@import "variables"
+
+.side-nav
+  display: flex
+  flex-direction: column
+  padding: 8px
+
+  .section-title
+    margin-top: 21px
+    padding: 14px
+    width: 100%
+    font-weight: 500
+    font-size: 18px
+    line-height: 1.2
+    background-color: $side-nav-section-background-color
+    color: $side-nav-section-text-color
+    border-bottom: 1px solid $side-nav-section-border-color
+
+.wrapper
+  min-height: 94vh
+  display: grid
+  grid-template-columns: 18% 82%
+
+  .side-nav
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.7)
+    background-color: $side-background-color
+
+  .main-content
+    background-color: $main-content-background-color
+    width: 100%
+    padding: 12px
+
+.products-list
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  grid-row-gap: 12px
+  grid-column-gap: 12px
+  padding: 22px 13px
+  background-color: transparent
+
+@media only screen and (max-width: 768px)
+  .side-nav
+    display: none
+  .wrapper
+    grid-template-columns: 100%
+  .products-list
+    background-color: transparent

@@ -1,0 +1,23 @@
+<app-top-navbar>
+
+</app-top-navbar>
+
+
+<div class="wrapper">
+
+  <aside class="side-nav left">
+    <!--categories menu here-->
+    <div class="section-title">
+      Categories
+    </div>
+    <app-categories-nav>
+    </app-categories-nav>
+  </aside>
+  <main class="main-content">
+    <div class="products-list">
+      <ng-container *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+      </ng-container>
+    </div>
+  </main>
+</div>

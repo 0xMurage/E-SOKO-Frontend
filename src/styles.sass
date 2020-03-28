@@ -1,0 +1,45 @@
+@import "resources/sass/variables"
+@import "resources/sass/icons"
+html
+  box-sizing: border-box
+
+body
+  font-family: 'Inter', sans-serif
+
+
+*, *::before, *::after
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  padding: 0
+a
+  text-decoration: none
+  color: hsla(0, 0%, 0%, 1)
+  cursor: pointer
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email]
+  padding: 12px 20px
+  width: 100%
+  border: 1px solid $default-input-border-color
+.control
+  padding-top: 8px
+
+.button
+  padding: 6px
+  cursor: pointer
+  text-align: center
+  font-style: normal
+  line-height: 1.5
+  border-style: solid
+  border-width: 1px
+// UTILITIES
+.text-center
+  text-align: center !important
+.no-display
+  display: none !important

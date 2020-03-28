@@ -1,0 +1,42 @@
+<div class="product-card">
+  <div class="featured-image">
+    <img src="{{product.images[0].location}}/{{product.images[0].name}}" alt="{{product.images[0].caption}}">
+  </div>
+
+  <div class="product-details">
+    <p class="name">
+      {{product.name}}
+    </p>
+  </div>
+  <div class="price-details">
+    <p class="current-price">
+      <span class="currency">{{product.prices[0].currency.symbol}}</span>
+      <span class="amount">{{product.prices[0].amount}}</span>
+    </p>
+    <ng-container *ngIf="hasDiscount">
+      <p class="before-price">
+        <span class="currency">{{product.prices[1].currency.symbol}}</span>
+        <span class="amount">
+        {{product.prices[1].amount}}
+      </span>
+      </p>
+      <p class="discount">
+        {{discount}}% off
+      </p>
+    </ng-container>
+  </div>
+
+  <div class="product-call-to-action">
+    <ng-container *ngIf="product?.cart?.quantity<1 else cartManagerButton">
+      <button class="button add-to-cart" (click)="updateCart()">add to cart</button>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #cartManagerButton>
+  <div class="content-in-cart">
+    <span class="button-reduce" (click)="updateCart(false)">-</span>
+    <span class="description">{{product?.cart?.quantity}} in cart</span>
+    <span class="button-add" (click)="updateCart()">+</span>
+  </div>
+</ng-template>

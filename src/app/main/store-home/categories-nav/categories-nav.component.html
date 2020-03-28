@@ -1,0 +1,5 @@
+<ul class="nav">
+  <li class="nav-item" *ngFor="let category of categories" routerLinkActive="active">
+    <a routerLink="products" queryParams="filter=category=" class="nav-link" >{{category.name}}</a>
+  </li>
+</ul>

@@ -1,0 +1,29 @@
+@import "variables"
+
+.nav
+  display: flex
+  flex-direction: column
+  list-style: none
+  background-color: $side-nav-category-background-color
+  border: solid 2px $side-nav-category-nav-border-color
+  border-top: none
+
+  .nav-item
+    width: 100%
+
+    .nav-link
+      font-size: 14px
+      display: block
+      padding: 8px
+      color: $side-nav-category-item-color
+
+      &:hover
+        text-decoration: underline
+
+    &.active
+      background-color: #dddddd
+
+    &:not(:last-child)
+      border-bottom: solid 1px $side-nav-category-item-border-color
+
+
