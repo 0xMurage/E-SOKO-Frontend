@@ -1,0 +1,31 @@
+name: Pull request
+description:
+
+body:
+-   type: dropdown
+    id: category
+    attributes:
+        label: Pull request category
+        options:
+         - Feature or platform improvement
+         - Dejank/minor UI fixes
+         - Bug fix
+         - CI/CD pipeline improvement
+    validations:
+        required: true
+- type: dropdown
+  id: design-review
+  attributes:
+    label: Requires design review?
+    options:
+        - Yes
+        - No
+  validations:
+     required: true
+- type: input
+  id: commitment-link
+  attributes:
+    label: Commitment link
+    description: All pull requests must contain a commitment link.
+  validations:
+    required: true
